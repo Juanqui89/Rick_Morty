@@ -1,0 +1,139 @@
+@media screen and (min-width: 320px) and (max-width: 375px) {
+    section.content {
+      gap: 20px;
+      height: auto;
+    }
+    img.character-img {
+      height: 200px;
+    }
+    button.prev,
+    button.next {
+      padding: 5px;
+      margin: 10px;
+    }
+    i.bi.bi-arrow-up-circle-fill {
+      font-size: 1.3em;
+      top: 85%;
+    }
+  }
+  @media screen and (min-width: 376px) and (max-width: 480px) {
+    section.content {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    button.prev,
+    button.next {
+      padding: 6px;
+      margin: 5px;
+    }
+    i.bi.bi-arrow-up-circle-fill {
+      font-size: 1.5em;
+      top: 85%;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    section.content {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    button.prev,
+    button.next{
+      margin: 5px;
+      border-radius: 5px;
+      padding: 5px;
+    }
+    i.bi.bi-arrow-up-circle-fill {
+      font-size: 1.5em;
+      top: 85%;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    section.content {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      font-size: 1.3em;
+    }
+    button.prev,
+    button.next {
+      margin: 10px;
+      font-size: 1.3em;
+    }
+    span {
+      font-size: 1.3em;
+    }
+    i.bi.bi-arrow-up-circle-fill {
+      font-size: 2em;
+      top: 84%;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    section.content {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      font-size: 1.3em;
+    }
+    img.character-img{
+      height: 200px;
+    }
+    i.bi.bi-arrow-up-circle-fill {
+      font-size: 1.8em;
+      top: 84%;
+      left: 94%;
+    }
+    footer {
+      font-size: 1.3em;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    section.content,
+    div.card-title.h5{
+      font-size: 1.5em;
+    }
+    img.character-img{
+      height: 250px;
+    }
+    div.directions{
+      margin-bottom: 80px;
+    }
+    button.prev,
+    button.next{
+      font-size: 1.5em;
+    }
+    span{
+      font-size: 1.5em;
+    }
+    i.bi.bi-arrow-up-circle-fill {
+      font-size: 2.2em;
+      top: 78%;
+      left: 94%;
+    }
+    footer p{
+      font-size: 1.3em;
+    }
+  }
+  @media screen and (min-width: 1366px) and (max-width: 1440px) {
+      section.content {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          font-size: 1.5em;
+        }
+        img.character-img{
+          height: 300px;
+        }
+        button.prev,
+        button.next{
+          margin: 10px;
+          padding: 10px;
+        }
+        span{
+          font-size: 1.5em;
+        }
+      i.bi.bi-arrow-up-circle-fill {
+          font-size: 2.2em;
+          top: 80%;
+          left: 94%;
+        }
+        footer p{
+          font-size: 1.3em;
+        }
+  }
