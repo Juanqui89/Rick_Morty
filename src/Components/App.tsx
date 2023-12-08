@@ -31,11 +31,11 @@ const App = () => {
   const fetchData = async () => {
     try {
       let url = "https://rickandmortyapi.com/api/character";
-  
+
       if (searchTerm) {
         url += `/?name=${searchTerm}`;
       }
-  
+
       const response = await axios.get(url);
       const result = response.data.results;
       setCharacters(result);
@@ -44,7 +44,7 @@ const App = () => {
       console.error("Error fetching data", error);
     }
   };
-  
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -98,7 +98,9 @@ const App = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button className="btn-search" onClick={fetchData}>Search</button>
+          <button className="btn-search" onClick={fetchData}>
+            Search
+          </button>
           <h1 className="title">Rick & Morty</h1>
           <section className="content">
             {characters.map((item) => (
