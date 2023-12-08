@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
@@ -25,17 +26,22 @@ interface Characters {
 const App = () => {
   const [characters, setCharacters] = useState<Characters[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(
-        "https://rickandmortyapi.com/api/character"
-      );
+      let url = "https://rickandmortyapi.com/api/character";
+
+      if (searchTerm) {
+        url += `/?name=${searchTerm}`;
+      }
+
+      const response = await axios.get(url);
       const result = response.data.results;
       setCharacters(result);
       console.log(response.data.results);
     } catch (error) {
-      console.error("Error fetching data");
+      console.error("Error fetching data", error);
     }
   };
 
@@ -85,6 +91,16 @@ const App = () => {
     <Container>
       <Row>
         <Col>
+          <input
+            type="text"
+            className="search"
+            placeholder="Search characters..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <button className="btn-search" onClick={fetchData}>
+            Search
+          </button>
           <h1 className="title">Rick & Morty</h1>
           <section className="content">
             {characters.map((item) => (
