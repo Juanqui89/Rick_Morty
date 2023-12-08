@@ -17,6 +17,38 @@
       #4cb8c4
     ); 
   }
+  input.search{
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto 0 auto;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  input.search:focus{
+    outline: none;
+  }
+  button.btn-search{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #b43104;
+    color: #fff;
+    font-weight: 500;
+  }
+  button.btn-search:hover{
+    background: #ff7f64;
+  }
+  button.btn-search:focus{
+    outline: none;
+  }
   h1.title {
     text-align: center;
     font-weight: 500;
